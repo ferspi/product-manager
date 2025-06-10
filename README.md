@@ -1,59 +1,70 @@
-# ProductManager
+# PAC 4 - Tecnología
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Se realizará con *Github Classroom* donde encontrarán el proyecto base y podrán realizar los cambios requeridos.
 
-## Development server
+Se permite usar material.
 
-To start a local development server, run:
+*Nombre (nro. de estudiante):* ...
 
-```bash
-ng serve
-```
+## Descripción
+Este repositorio contiene un proyecto vacío de Angular y una estructura de carpetas para tomar como base.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**El objetivo de la actividad es completar el proyecto inicial para poder cumplir con los requerimientos del sistema de gestión de productos.**
 
-## Code scaffolding
+## Requerimientos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Ver la lista de productos, pudiendo filtrar por populares y poco populares. ***[49%]***
+2. Poder navegar entre las vistas de *Inicio* y *Productos*. ***[35%]***
+    - La vista de *Inicio* debe tener un mensaje de bienvenida ("Bienvenido al sistema de gestión de productos").
+    - La vista de *Productos* debe mostrar la lista de productos, con el filtrado. El botón para editar cada producto NO se debe mostrar.
 
-```bash
-ng generate component component-name
-```
+## Interacción con la API
+La API a utilizar es la siguiente: `https://fakestoreapi.com`.
+Los endpoints a utilizar son:
+- `GET /products`: Obtener todos los productos.
+- Los productos tienen una propiedad `rating.count` que indica las reseñas/popularidad.
+- Considerar "popular" si `rating.count >= 200`, "poco popular" si `rating.count < 200`.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Consideraciones
+- Utilizar los componentes `products`, `product-list` y `product-item` para mostrar los productos.
+- Utilizar el servicio `product.service.ts` para interactuar con la API.
+- Se permite hacer el filtrado de productos en el frontend, no es necesario recurrir a la API para ello.
+- Los productos deben mostrar: título, precio y popularidad (popular/poco popular).
 
-```bash
-ng generate --help
-```
+## Letra
 
-## Building
+1. Realizar todos los cambios necesarios para cumplir con la TOTALIDAD de los requerimientos. ***[84%]***
+2. Describir, con palabras, como realizarían un requerimiento que permita marcar un producto como favorito. ***[15%]***
+3. Completar, al inicio de este archivo, el nombre y número de estudiante. ***[1%]***
 
-To build the project run:
+*En la sección anterior hay un aproximado del porcentaje del total que representa cada requerimiento.*
 
-```bash
-ng build
-```
+## Requerimiento: marcar como favorito
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+(Pueden suponer que la API tiene un endpoint para gestionar favoritos de usuario)
 
-## Running unit tests
+<Completar aquí>
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## ¿Cómo levantar la aplicación?
 
-```bash
-ng test
-```
+1. Moverse dentro de aplicación de Angular
 
-## Running end-to-end tests
+   ```
+   cd product-manager
+   ```
 
-For end-to-end (e2e) testing, run:
+2. Instalar las dependencias
 
-```bash
-ng e2e
-```
+   ```
+   npm install
+   ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Levantar el proyecto
 
-## Additional Resources
+   ```
+   ng serve --open
+   ```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Suposiciones
+
+En caso de ser necesario, en esta sección se pueden agregar suposiciones que se consideren necesarias para completar la actividad.
